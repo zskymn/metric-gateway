@@ -1,0 +1,40 @@
+{
+  "name": "metric-gateway",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --recursive --watch",
+    "coverage": "cross-env NODE_ENV=test nyc --all --reporter=html mocha --recursive"
+  },
+  "dependencies": {
+    "bunyan": "1.8.10",
+    "hashring": "3.2.0",
+    "jsonwebtoken": "7.4.1",
+    "koa": "2.3.0",
+    "koa-bodyparser": "4.2.0",
+    "koa-compress": "2.0.0",
+    "koa-router": "7.2.1",
+    "lodash": "4.17.5",
+    "moment": "2.18.1",
+    "request": "2.81.0",
+    "request-promise": "4.2.1"
+  },
+  "devDependencies": {
+    "chai": "4.0.2",
+    "cross-env": "5.0.1",
+    "mocha": "3.4.2",
+    "nyc": "11.4.1",
+    "rewire": "3.0.0",
+    "sinon": "4.3.0",
+    "supertest": "3.0.0"
+  },
+  "nyc": {
+    "include": [
+      "common/**/*.js",
+      "service/**/*.js",
+      "index.js"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  }
+}
