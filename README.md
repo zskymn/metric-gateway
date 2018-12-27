@@ -133,6 +133,18 @@ body:
 
 获取appcode的token接口
 
+params：
+
+```sh
+?appcode=<appcode>&user_id=<user_id>
+```
+
+headers:
+
+```sh
+X-Admin-Token: ops_watcher:de38e208-0815-11e9-b288-34363bc641f0
+```
+
 ## 指标类型
 
 ### set
